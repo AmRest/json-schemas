@@ -1,0 +1,359 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "takeawaycom-ordering-restaurantmappings.schema.json",
+    "title": "Restaurantmappings",
+    "description": "Restaurantmappings for TakeAwayCom Ordering Integrator",
+    "type": "object",
+    "properties": {
+        "defaultApiEndpoint": {
+            "description": "Default API endpoint configuration which applies to all restaurant mappings of this file and in case of the master file to all group files (optional; if missing then either the group MUST define a default API endpoint configuration or a concrete restaurant mapping MUST define an API endpoint configuration)",
+            "type": "object",
+            "properties": {
+                "baseUrl": {
+                    "description": "The base URL of Ordering API (mandatory; if missing then any inherited base URL applies)",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "The bearer token for accessing the Ordering API (mandatory; if missing then any inherited token applies)",
+                    "type": "string"
+                },
+                "hostHeader": {
+                    "description": "The value of the Host HTTP header for selecting an instance of Ordering API in a Tomcat which hosts different instances of Ordering API (optional; if missing or null then any inherited host header applies; if empty string then it removes any inherited host header)"
+                }
+            }
+        },
+        "defaultApiRestaurant": {
+            "description": "Default API restaurant configuration which applies to all restaurant mappings of this file and in case of the master file to all group files (optional; if missing then either the group MUST define a default API restaurant configuration or a concrete restaurant mapping MUST define an API restaurant configuration)",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "ID of the API restaurant",
+                    "type": "integer",
+                    "exclusiveMinimum": 1
+                },
+                "description": {
+                    "description": "Description of the API restaurant; it is used in the Excel menu generator for filtering restaurants (optional)",
+                    "type": "string"
+                },
+                "source": {
+                    "description": "The order source which the menu is generated for in Delivery Hero (optional; \"TAKEAWAY_COM\" if missing)",
+                    "type": "string"
+                },
+                "brand": {
+                    "description": "The brand which the menu is generated for in Delivery Hero",
+                    "type": "string",
+                    "enum": [
+                        "KFC",
+                        "PH"
+                    ]
+                },
+                "menuLanguage": {
+                    "description": "The language in which the menu is generated in Delivery Hero (optional; en if missing)",
+                    "type": "string",
+                    "examples": [
+                        "pl",
+                        "cs",
+                        "hu",
+                        "en"
+                    ]
+                },
+                "lat": {
+                    "description": "The latitude of the restaurant's geolocation (mandatory)",
+                    "type": "string"
+                },
+                "lng": {
+                    "description": "The longitude of the restaurant's geolocation (mandatory)",
+                    "type": "string"
+                },
+                "timeZone": {
+                    "description": "The identifier of the restaurant's time zone from the Olson database (see https://en.wikipedia.org/wiki/Tz_database) (optional; default time zone of the server if missing)",
+                    "type": "string"
+                },
+                "deliveryFeeProductId": {
+                    "description": "The identifier of a delivery fee product (optional; no delivery fee is passed from Delivery Hero to Ordering API if missing)",
+                    "type": "integer",
+                    "exclusiveMinimum": 1
+                }
+            }
+        },
+        "defaultTakeawayComEndpoint": {
+            "description": "Default Takeaway.com restaurant configuration which applies to all restaurant mappings of this file and in case of the master file to all group files (optional; if missing then either the group MUST define a default Takeaway.com restaurant configuration or a concrete restaurant mapping MUST define an Takeaway.com restaurant configuration)",
+            "type": "object",
+            "properties": {
+                "baseUrl": {
+                    "description": "The base URL of Takeaway.com's API (optional; if missing then any inherited base URL applies)",
+                    "type": "string"
+                },
+                "apiKey": {
+                    "description": "The secret API key for Takeaway.com (optional; if missing then any inherited API key applies)",
+                    "type": "string"
+                },
+                "sessionTokenSigningAlgorithm": {
+                    "description": "The signing algorithm for Takeaway.com tokens (optional; if missing then SHA256withRSA is assumed)",
+                    "type": "string"
+                }
+            }
+        },
+        "defaultTakeawayComRestaurant": {
+            "description": "Default Takeaway.com restaurant configuration which applies to all restaurant mappings of this file and in case of the master file to all group files (optional; if missing then either the group MUST define a default Takeaway.com restaurant configuration or a concrete restaurant mapping MUST define an Takeaway.com restaurant configuration)",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "ID of the Takeaway.com restaurant, this is NOT necessarily the identifier in Takeaway.com's restaurant site's URL",
+                    "type": "string"
+                }
+            }
+        },
+        "defaultIntegratorEndpoint": {
+            "description": "Default integrator endpoint configuration which applies to all restaurant mappings of this file and in case of the master file to all group files (optional; if missing then either the group MUST define a default integrator endpoint configuration or a concrete restaurant mapping MUST define an integrator endpoint configuration)",
+            "type": "object",
+            "properties": {
+                "baseUrl": {
+                    "description": "The base URL which the integrator uses to be called back by Takeaway.com (mandatory; may be inherited from \"defaultIntegratorEndpoint\")",
+                    "type": "string"
+                }
+            }
+        },
+        "defaultTranslations": {
+            "description": "Translation templates per language (optional; if missing then the specific restaurant mapping's translations apply; otherwise these translations are merged with eventually existing translations from specific mappings)",
+            "type": "object",
+            "patternProperties": {
+                "default.*": {
+                    "description": "Selects a language. \"default\" is used as a fallback language, if for a restaurant's menu language there is not found any translation template",
+                    "type": "object",
+                    "examples": [
+                        "default|pl|cs|hu|en"
+                    ],
+                    "properties": {
+                        "condimentCategoryName": {
+                            "description": "The fixed text for names of extras and condiment groups (optional; if missing then the value coming from Ordering API is used)",
+                            "type": "string"
+                        },
+                        "fallbackSpecialtyOptionName": {
+                            "description": "A fallback text for specialty choices if such an API option has no title, e.g. in pizza sets (optional; if missing then \"Specialty\" is used as the default value independently of the chosen menu language)",
+                            "type": "string"
+                        },
+                        "fallbackDoughOptionName": {
+                            "description": "A fallback text for dough choices if such an API option has no title, e.g. in a pizza (optional; if missing then \"Dough\" is used as the default value independently of the chosen menu language)",
+                            "type": "string"
+                        },
+                        "fallbackToppingCategoryOptionName": {
+                            "description": "A fallback text for topping categories if such an API option has no title, e.g. in a pizza (optional; if missing then \"Choose what you like\" is used as the default value independently of the chosen menu language)",
+                            "type": "string"
+                        },
+                        "fallbackComboGroupOptionName": {
+                            "description": "A fallback text for choices if such an API option has no title, e.g. in sets (optional; if missing then \"Choose what you like\" is used as the default value independently of the chosen menu language)",
+                            "type": "string"
+                        },
+                        "doubleToppingPrefix": {
+                            "description": "A prefixing text for default toppings of pizzas which can be chosen in double quantity.",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "defaultFeatures": {
+            "description": "Feature toggles (optional; if missing then the specific restaurant mapping's feature toggles apply; otherwise these features are merged with eventually existing features from specific mappings)",
+            "type": "object",
+            "properties": {
+                "sync.condiments": {
+                    "description": "Enables or disables the inclusion of condiments in menus. Nevertheless condiments are accepted in orders to allow for a transition period between configuration changes and the next menu import (optional; if missing then disabled)",
+                    "type": "boolean"
+                },
+                "sync.fullMenu": {
+                    "description": "Enables the full menu (with breakfast support) or disables it and synchronizes only the current menu at the moment of importing the menu (optional; if missing then disabled)",
+                    "type": "boolean"
+                },
+                "fleet.confirm": {
+                    "description": "Enables confirmation of fleet orders of the outdated Delivery Hero integration, which does NOT work via a DD integrator. This feature toggle is only used if the flow control action \"detectMarketplaceOrder\" has detected a non-marketplace order. (optional; if missing then disabled)",
+                    "type": "boolean"
+                }
+            }
+        },
+        "mappings": {
+            "description": "Mapping for the restaurants",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "active": {
+                        "description": "A flag indicating whether to use or ignore the restaurant mapping (optional; if missing then the default value is true)",
+                        "type": "boolean"
+                    },
+                    "takeawayComRestaurant": {
+                        "description": "TakeawayCom restaurant attributes",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID of the Takeaway.com restaurant, this is NOT necessarily the identifier in Takeaway.com's restaurant site's URL",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "apiRestaurant": {
+                        "description": "Api Restaurant configuration",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID of the API restaurant",
+                                "type": "integer",
+                                "exclusiveMinimum": 1
+                            },
+                            "description": {
+                                "description": "Description of the API restaurant; it is used in the Excel menu generator for filtering restaurants (optional)",
+                                "type": "string"
+                            },
+                            "source": {
+                                "description": "The order source which the menu is generated for in Delivery Hero (optional; \"TAKEAWAY_COM\" if missing)",
+                                "type": "string"
+                            },
+                            "brand": {
+                                "description": "The brand which the menu is generated for in Delivery Hero",
+                                "type": "string",
+                                "enum": [
+                                    "KFC",
+                                    "PH"
+                                ]
+                            },
+                            "menuLanguage": {
+                                "description": "The language in which the menu is generated in Delivery Hero (optional; en if missing)",
+                                "type": "string",
+                                "examples": [
+                                    "pl",
+                                    "cs",
+                                    "hu",
+                                    "en"
+                                ]
+                            },
+                            "lat": {
+                                "description": "The latitude of the restaurant's geolocation (mandatory)",
+                                "type": "string"
+                            },
+                            "lng": {
+                                "description": "The longitude of the restaurant's geolocation (mandatory)",
+                                "type": "string"
+                            },
+                            "timeZone": {
+                                "description": "The identifier of the restaurant's time zone from the Olson database (see https://en.wikipedia.org/wiki/Tz_database) (optional; default time zone of the server if missing)",
+                                "type": "string"
+                            },
+                            "deliveryFeeProductId": {
+                                "description": "The identifier of a delivery fee product (optional; no delivery fee is passed from Delivery Hero to Ordering API if missing)",
+                                "type": "integer",
+                                "exclusiveMinimum": 1
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "lat",
+                            "lng"
+                        ]
+                    },
+                    "apiEndpoint": {
+                        "description": "API endpoint configuration",
+                        "type": "object",
+                        "properties": {
+                            "baseUrl": {
+                                "description": "The base URL of Ordering API (mandatory; if missing then any inherited base URL applies)",
+                                "type": "string"
+                            },
+                            "token": {
+                                "description": "The bearer token for accessing the Ordering API (mandatory; if missing then any inherited token applies)",
+                                "type": "string"
+                            },
+                            "hostHeader": {
+                                "description": "The value of the Host HTTP header for selecting an instance of Ordering API in a Tomcat which hosts different instances of Ordering API (optional; if missing or null then any inherited host header applies; if empty string then it removes any inherited host header)"
+                            }
+                        }
+                    },
+                    "takeawayComEndpoint": {
+                        "description": "Restaurant Takeaway.com endpoint configuration",
+                        "type": "object",
+                        "properties": {
+                            "baseUrl": {
+                                "description": "The base URL of Takeaway.com's API (optional; if missing then any inherited base URL applies)",
+                                "type": "string"
+                            },
+                            "apiKey": {
+                                "description": "The secret API key for Takeaway.com (optional; if missing then any inherited API key applies)",
+                                "type": "string"
+                            },
+                            "sessionTokenSigningAlgorithm": {
+                                "description": "The signing algorithm for Takeaway.com tokens (optional; if missing then SHA256withRSA is assumed)",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "integratorEndpoint": {
+                        "description": "Callback integrator endpoint configuration",
+                        "type": "object",
+                        "properties": {
+                            "baseUrl": {
+                                "description": "The base URL which the integrator uses to be called back by Takeaway.com (mandatory; may be inherited from \"defaultIntegratorEndpoint\")",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "translations": {
+                        "description": "Restaurant-specific translation templates per language (optional; if missing then any inherited translations apply; otherwise these translations are merged with eventually existing default translations)",
+                        "type": "object",
+                        "patternProperties": {
+                            "default.*": {
+                                "description": "Selects a language. \"default\" is used as a fallback language, if for a restaurant's menu language there is not found any translation template",
+                                "type": "object",
+                                "examples": [
+                                    "default|pl|cs|hu|en"
+                                ],
+                                "properties": {
+                                    "condimentCategoryName": {
+                                        "description": "The fixed text for names of extras and condiment groups (optional; if missing then the value coming from Ordering API is used)",
+                                        "type": "string"
+                                    },
+                                    "fallbackSpecialtyOptionName": {
+                                        "description": "A fallback text for specialty choices if such an API option has no title, e.g. in pizza sets (optional; if missing then \"Specialty\" is used as the default value independently of the chosen menu language)",
+                                        "type": "string"
+                                    },
+                                    "fallbackDoughOptionName": {
+                                        "description": "A fallback text for dough choices if such an API option has no title, e.g. in a pizza (optional; if missing then \"Dough\" is used as the default value independently of the chosen menu language)",
+                                        "type": "string"
+                                    },
+                                    "fallbackToppingCategoryOptionName": {
+                                        "description": "A fallback text for topping categories if such an API option has no title, e.g. in a pizza (optional; if missing then \"Choose what you like\" is used as the default value independently of the chosen menu language)",
+                                        "type": "string"
+                                    },
+                                    "fallbackComboGroupOptionName": {
+                                        "description": "A fallback text for choices if such an API option has no title, e.g. in sets (optional; if missing then \"Choose what you like\" is used as the default value independently of the chosen menu language)",
+                                        "type": "string"
+                                    },
+                                    "doubleToppingPrefix": {
+                                        "description": "A prefixing text for default toppings of pizzas which can be chosen in double quantity.",
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "features": {
+                        "description": "Feature toggles (optional; if missing then the specific restaurant mapping's feature toggles apply; otherwise these features are merged with eventually existing features from specific mappings)",
+                        "type": "object",
+                        "properties": {
+                            "sync.condiments": {
+                                "description": "Enables or disables the inclusion of condiments in menus. Nevertheless condiments are accepted in orders to allow for a transition period between configuration changes and the next menu import (optional; if missing then disabled)",
+                                "type": "boolean"
+                            },
+                            "sync.fullMenu": {
+                                "description": "Enables the full menu (with breakfast support) or disables it and synchronizes only the current menu at the moment of importing the menu (optional; if missing then disabled)",
+                                "type": "boolean"
+                            },
+                            "fleet.confirm": {
+                                "description": "Enables confirmation of fleet orders of the outdated Delivery Hero integration, which does NOT work via a DD integrator. This feature toggle is only used if the flow control action \"detectMarketplaceOrder\" has detected a non-marketplace order. (optional; if missing then disabled)",
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

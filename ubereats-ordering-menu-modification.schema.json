@@ -1,0 +1,172 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "./ubereats-ordering-menu-modification.schema.json",
+    "title": "UberEats Menu Modification",
+    "description": "Uber Eats Menu Modification definitions",
+    "type": "object",
+    "properties": {
+        "rules": {
+            "description": "Individual rules for menu changes to be applied",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "if": {
+                        "description": "JavaEL Expression, allowed restaurant.[apiId, apiUrl, storeId, brand], Regex supported",
+                        "type": "string",
+                        "examples": [
+                            "restaurant.apiId == 1 and restaurant.storeId == 'cd2ef857-fcfa-4be9-b8e0-5c1f6c1de2e5'"
+                        ]
+                    },
+                    "items": {
+                        "description": "Items definitions to be overwritted",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "active": {
+                                    "description": "Item active or inactive",
+                                    "type": "boolean"
+                                },
+                                "id": {
+                                    "description": "Identifier for the product",
+                                    "type": "string",
+                                    "examples": [
+                                        "P-17006631"
+                                    ]
+                                },
+                                "title": {
+                                    "description": "Short name for the items",
+                                    "type": "object",
+                                    "examples": [
+                                        "en",
+                                        "fr"
+                                    ],
+                                    "patternProperties": {
+                                        ".*": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "description": {
+                                    "description": "Description for the items",
+                                    "type": "object",
+                                    "examples": [
+                                        "en",
+                                        "fr"
+                                    ],
+                                    "patternProperties": {
+                                        ".*": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "image_url": {
+                                    "description": "URL to time picture",
+                                    "type": "string"
+                                },
+                                "price": {
+                                    "description": "Item price without the decimal point",
+                                    "type": "integer",
+                                    "exclusiveMinimum": 0
+                                },
+                                "modifiers": {
+                                    "description": "Modifiers group definition",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "description": "Modifier group id",
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "description": "Short name for modifier group",
+                                                "type": "object",
+                                                "examples": [
+                                                    "en",
+                                                    "fr"
+                                                ],
+                                                "patternProperties": {
+                                                    ".*": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            },
+                                            "quantity": {
+                                                "description": "Quantity modifier group attributes",
+                                                "type": "object",
+                                                "properties": {
+                                                    "min_permitted": {
+                                                        "description": "Minimal quantity to be selected",
+                                                        "type": "integer"
+                                                    },
+                                                    "max_permitted": {
+                                                        "description": "Maximum quantity to be selected",
+                                                        "type": "integer"
+                                                    },
+                                                    "default_quantity": {
+                                                        "description": "Default quantity to be selected",
+                                                        "type": "integer"
+                                                    }
+                                                }
+                                            },
+                                            "items": {
+                                                "description": "Items available in the modifier group",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "description": "Item id",
+                                                            "type": "string"
+                                                        },
+                                                        "title": {
+                                                            "description": "Short name for item in modifier group",
+                                                            "type": "object",
+                                                            "examples": [
+                                                                "en",
+                                                                "fr"
+                                                            ],
+                                                            "patternProperties": {
+                                                                ".*": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        },
+                                                        "price": {
+                                                            "description": "Modifier item price without decimal point",
+                                                            "type": "integer"
+                                                        },
+                                                        "quantity": {
+                                                            "description": "Quantity modifier item attributes",
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "min_permitted": {
+                                                                    "description": "Minimal quantity to be selected",
+                                                                    "type": "integer"
+                                                                },
+                                                                "max_permitted": {
+                                                                    "description": "Maximum quantity to be selected",
+                                                                    "type": "integer"
+                                                                },
+                                                                "default_quantity": {
+                                                                    "description": "Default quantity to be selected",
+                                                                    "type": "integer"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
