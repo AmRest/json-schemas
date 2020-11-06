@@ -62,7 +62,7 @@
                     "type": "string"
                 },
                 "timeZone": {
-                    "description": "The identifier of the restaurant's time zone from the Olson database (see https://en.wikipedia.org/wiki/Tz_database) (optional; default time zone of the server if missing)",
+                    "description": "The identifier of the restaurant's time zone from the Olson database (see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones ) (optional; default time zone of the server if missing)",
                     "type": "string",
                     "examples": ["Europe/Warsaw", "Europe/Prague", "Europe/Berlin"]
                 },
@@ -269,7 +269,7 @@
                                 "type": "string"
                             },
                             "timeZone": {
-                                "description": "The identifier of the restaurant's time zone from the Olson database (see https://en.wikipedia.org/wiki/Tz_database) (optional; default time zone of the server if missing)",
+                                "description": "The identifier of the restaurant's time zone from the Olson database (see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones ) (optional; default time zone of the server if missing)",
                                 "type": "string",
                                 "examples": ["Europe/Warsaw", "Europe/Prague", "Europe/Berlin"]
                             },
