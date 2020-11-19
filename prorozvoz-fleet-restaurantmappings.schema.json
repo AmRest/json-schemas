@@ -52,6 +52,42 @@
                 }
             }
         },
+        "defaultPaymentMapping": {
+            "description": "The default Prorozvoz payment type mappings",
+            "type": "object",
+            "properties": {
+                "mappings": {
+                    "description": "Mapping array",
+                    "type": "object",
+                    "properties": {
+                        "CASH": {
+                            "description": "Name to be use instead of the CASH payment type",
+                            "type": "string"
+                        },
+                        "CARD_DEL": {
+                            "description": "Name to be use instead of the CARD_DEL payment type",
+                            "type": "string"
+                        },
+                        "CARD_ONLINE": {
+                            "description": "Name to be use instead of the CARD_ONLINE payment type",
+                            "type": "string"
+                        },
+                        "ONLINE": {
+                            "description": "Name to be use instead of the ONLINE payment type",
+                            "type": "string"
+                        },
+                        "TRANSFER": {
+                            "description": "Name to be use instead of the TRANSFER payment type",
+                            "type": "string"
+                        },
+                        "WEBPAYMENT": {
+                            "description": "Name to be use instead of the WEBPAYMENT payment type",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "mappings": {
             "description": "Mapping for the restaurants",
             "type": "array",
@@ -110,9 +146,47 @@
                                 "type": "string"
                             }
                         }
+                    },
+                    "paymentMapping": {
+                        "description": "The default Prorozvoz payment type mappings",
+                        "type": "object",
+                        "properties": {
+                            "mappings": {
+                                "description": "Mapping array",
+                                "type": "object",
+                                "properties": {
+                                    "CASH": {
+                                        "description": "Name to be use instead of the CASH payment type",
+                                        "type": "string"
+                                    },
+                                    "CARD_DEL": {
+                                        "description": "Name to be use instead of the CARD_DEL payment type",
+                                        "type": "string"
+                                    },
+                                    "CARD_ONLINE": {
+                                        "description": "Name to be use instead of the CARD_ONLINE payment type",
+                                        "type": "string"
+                                    },
+                                    "ONLINE": {
+                                        "description": "Name to be use instead of the ONLINE payment type",
+                                        "type": "string"
+                                    },
+                                    "TRANSFER": {
+                                        "description": "Name to be use instead of the TRANSFER payment type",
+                                        "type": "string"
+                                    },
+                                    "WEBPAYMENT": {
+                                        "description": "Name to be use instead of the WEBPAYMENT payment type",
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
-                "required": ["restaurantId", "restaurantMpk"]
+                "required": [
+                    "restaurantMpk"
+                ]
             }
         }
     }
