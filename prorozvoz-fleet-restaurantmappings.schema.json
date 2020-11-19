@@ -35,6 +35,10 @@
                 "password": {
                     "description": "The password for accessing ActiveMQ's REST API at the given base URL. (mandatory)",
                     "type": "string"
+                },
+                "ecommerceOrderTopic": {
+                    "description": "Name of the topic to be check for new messages on ActiveMQ's REST API",
+                    "type": "string"
                 }
             }
         },
@@ -129,6 +133,10 @@
                             },
                             "password": {
                                 "description": "The password for accessing ActiveMQ's REST API at the given base URL. (mandatory)",
+                                "type": "string"
+                            },
+                            "ecommerceOrderTopic": {
+                                "description": "Name of the topic to be check for new messages on ActiveMQ's REST API",
                                 "type": "string"
                             }
                         }
