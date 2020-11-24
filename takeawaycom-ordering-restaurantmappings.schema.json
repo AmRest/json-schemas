@@ -36,11 +36,11 @@
                     "type": "string"
                 },
                 "source": {
-                    "description": "The order source which the menu is generated for in Delivery Hero (optional; \"TAKEAWAY_COM\" if missing)",
+                    "description": "The order source which the menu is generated for in Take Away Com (optional; \"TAKEAWAY_COM\" if missing)",
                     "type": "string"
                 },
                 "brand": {
-                    "description": "The brand which the menu is generated for in Delivery Hero",
+                    "description": "The brand which the menu is generated for in Take Away Com",
                     "type": "string",
                     "enum": [
                         "KFC",
@@ -48,7 +48,7 @@
                     ]
                 },
                 "menuLanguage": {
-                    "description": "The language in which the menu is generated in Delivery Hero (optional; en if missing)",
+                    "description": "The language in which the menu is generated in Take Away Com (optional; en if missing)",
                     "type": "string",
                     "examples": [
                         "pl",
@@ -71,7 +71,7 @@
                     "examples": ["Europe/Warsaw", "Europe/Prague", "Europe/Berlin"]
                 },
                 "deliveryFeeProductId": {
-                    "description": "The identifier of a delivery fee product (optional; no delivery fee is passed from Delivery Hero to Ordering API if missing)",
+                    "description": "The identifier of a delivery fee product (optional; no delivery fee is passed from Take Away Com to Ordering API if missing)",
                     "type": "integer",
                     "exclusiveMinimum": 1
                 }
@@ -167,7 +167,7 @@
                     "type": "boolean"
                 },
                 "fleet.confirm": {
-                    "description": "Enables confirmation of fleet orders of the outdated Delivery Hero integration, which does NOT work via a DD integrator. This feature toggle is only used if the flow control action \"detectMarketplaceOrder\" has detected a non-marketplace order. (optional; if missing then disabled)",
+                    "description": "Enables confirmation of fleet orders of the outdated Take Away Com integration, which does NOT work via a DD integrator. This feature toggle is only used if the flow control action \"detectMarketplaceOrder\" has detected a non-marketplace order. (optional; if missing then disabled)",
                     "type": "boolean"
                 }
             }
@@ -206,11 +206,11 @@
                                 "type": "string"
                             },
                             "source": {
-                                "description": "The order source which the menu is generated for in Delivery Hero (optional; \"TAKEAWAY_COM\" if missing)",
+                                "description": "The order source which the menu is generated for in Take Away Com (optional; \"TAKEAWAY_COM\" if missing)",
                                 "type": "string"
                             },
                             "brand": {
-                                "description": "The brand which the menu is generated for in Delivery Hero",
+                                "description": "The brand which the menu is generated for in Take Away Com",
                                 "type": "string",
                                 "enum": [
                                     "KFC",
@@ -218,7 +218,7 @@
                                 ]
                             },
                             "menuLanguage": {
-                                "description": "The language in which the menu is generated in Delivery Hero (optional; en if missing)",
+                                "description": "The language in which the menu is generated in Take Away Com (optional; en if missing)",
                                 "type": "string",
                                 "examples": [
                                     "pl",
@@ -241,7 +241,7 @@
                                 "examples": ["Europe/Warsaw", "Europe/Prague", "Europe/Berlin"]
                             },
                             "deliveryFeeProductId": {
-                                "description": "The identifier of a delivery fee product (optional; no delivery fee is passed from Delivery Hero to Ordering API if missing)",
+                                "description": "The identifier of a delivery fee product (optional; no delivery fee is passed from Take Away Com to Ordering API if missing)",
                                 "type": "integer",
                                 "exclusiveMinimum": 1
                             }
@@ -349,7 +349,7 @@
                                 "type": "boolean"
                             },
                             "fleet.confirm": {
-                                "description": "Enables confirmation of fleet orders of the outdated Delivery Hero integration, which does NOT work via a DD integrator. This feature toggle is only used if the flow control action \"detectMarketplaceOrder\" has detected a non-marketplace order. (optional; if missing then disabled)",
+                                "description": "Enables confirmation of fleet orders of the outdated Take Away Com integration, which does NOT work via a DD integrator. This feature toggle is only used if the flow control action \"detectMarketplaceOrder\" has detected a non-marketplace order. (optional; if missing then disabled)",
                                 "type": "boolean"
                             }
                         }
