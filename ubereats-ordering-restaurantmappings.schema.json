@@ -266,5 +266,5 @@
             }
         }
     },
-    "additionalProperties": false
+    "additionalProperties": true
 }

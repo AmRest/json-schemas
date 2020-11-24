@@ -358,5 +358,5 @@
             }
         }
     },
-    "additionalProperties": false
+    "additionalProperties": true
 }
