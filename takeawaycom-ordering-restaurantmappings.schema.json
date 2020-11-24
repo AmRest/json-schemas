@@ -29,7 +29,7 @@
                 "id": {
                     "description": "ID of the API restaurant",
                     "type": "integer",
-                    "exclusiveMinimum": 1
+                    "exclusiveMinimum": 0
                 },
                 "description": {
                     "description": "Description of the API restaurant; it is used in the Excel menu generator for filtering restaurants (optional)",
@@ -199,7 +199,7 @@
                             "id": {
                                 "description": "ID of the API restaurant",
                                 "type": "integer",
-                                "exclusiveMinimum": 1
+                                "exclusiveMinimum": 0
                             },
                             "description": {
                                 "description": "Description of the API restaurant; it is used in the Excel menu generator for filtering restaurants (optional)",

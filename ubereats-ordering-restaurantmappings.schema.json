@@ -29,7 +29,7 @@
                 "id": {
                     "description": "ID of the API restaurant",
                     "type": "integer",
-                    "exclusiveMinimum": 1
+                    "exclusiveMinimum": 0
                 },
                 "source": {
                     "description": "The order source which the menu is generated for in Uber Eats (optional; \"UBER_EATS\" if missing)",
@@ -159,7 +159,7 @@
                             "id": {
                                 "description": "ID of the API restaurant",
                                 "type": "integer",
-                                "exclusiveMinimum": 1
+                                "exclusiveMinimum": 0
                             },
                             "source": {
                                 "description": "The order source which the menu is generated for in Uber Eats (optional; \"UBER_EATS\" if missing)",
