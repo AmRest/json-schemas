@@ -64,7 +64,11 @@
                 "timeZone": {
                     "description": "The identifier of the restaurant's time zone from the Olson database (see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones ) (optional; default time zone of the server if missing)",
                     "type": "string",
-                    "examples": ["Europe/Warsaw", "Europe/Prague", "Europe/Berlin"]
+                    "examples": [
+                        "Europe/Warsaw",
+                        "Europe/Prague",
+                        "Europe/Berlin"
+                    ]
                 },
                 "deliveryFeeProductId": {
                     "description": "The identifier of a delivery fee product (optional; no delivery fee is passed from Uber Eats to Ordering API if missing)",
@@ -108,6 +112,26 @@
                     "properties": {
                         "condimentCategoryName": {
                             "description": "The fixed text for names of extras and condiment groups (optional; if missing then the value coming from Ordering API is used)",
+                            "type": "string"
+                        },
+                        "defaultMenuName": {
+                            "description": "The fixed text for the restaurant's default menu name (optional; if missing then \"Menu\")",
+                            "type": "string"
+                        },
+                        "fallbackSpecialtyOptionName": {
+                            "description": "A fallback text for specialty choices if such an API option has no title, e.g. in pizza sets (optional; if missing then \"Specialty\" is used as the default value independently of the chosen menu language)",
+                            "type": "string"
+                        },
+                        "fallbackDoughOptionName": {
+                            "description": "A fallback text for dough choices if such an API option has no title, e.g. in a pizza (optional; if missing then \"Dough\" is used as the default value independently of the chosen menu language)",
+                            "type": "string"
+                        },
+                        "fallbackToppingCategoryOptionName": {
+                            "description": "A fallback text for topping categories if such an API option has no title, e.g. in a pizza (optional; if missing then \"Choose what you like\" is used as the default value independently of the chosen menu language)",
+                            "type": "string"
+                        },
+                        "fallbackComboGroupOptionName": {
+                            "description": "A fallback text for choices if such an API option has no title, e.g. in sets (optional; if missing then \"Choose what you like\" is used as the default value independently of the chosen menu language)",
                             "type": "string"
                         }
                     }
@@ -194,7 +218,11 @@
                             "timeZone": {
                                 "description": "The identifier of the restaurant's time zone from the Olson database (see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones ) (optional; default time zone of the server if missing)",
                                 "type": "string",
-                                "examples": ["Europe/Warsaw", "Europe/Prague", "Europe/Berlin"]
+                                "examples": [
+                                    "Europe/Warsaw",
+                                    "Europe/Prague",
+                                    "Europe/Berlin"
+                                ]
                             },
                             "deliveryFeeProductId": {
                                 "description": "The identifier of a delivery fee product (optional; no delivery fee is passed from Uber Eats to Ordering API if missing)",
@@ -238,6 +266,26 @@
                                 "properties": {
                                     "condimentCategoryName": {
                                         "description": "The fixed text for names of extras and condiment groups (optional; if missing then the value coming from Ordering API is used)",
+                                        "type": "string"
+                                    },
+                                    "defaultMenuName": {
+                                        "description": "The fixed text for the restaurant's default menu name (optional; if missing then \"Menu\")",
+                                        "type": "string"
+                                    },
+                                    "fallbackSpecialtyOptionName": {
+                                        "description": "A fallback text for specialty choices if such an API option has no title, e.g. in pizza sets (optional; if missing then \"Specialty\" is used as the default value independently of the chosen menu language)",
+                                        "type": "string"
+                                    },
+                                    "fallbackDoughOptionName": {
+                                        "description": "A fallback text for dough choices if such an API option has no title, e.g. in a pizza (optional; if missing then \"Dough\" is used as the default value independently of the chosen menu language)",
+                                        "type": "string"
+                                    },
+                                    "fallbackToppingCategoryOptionName": {
+                                        "description": "A fallback text for topping categories if such an API option has no title, e.g. in a pizza (optional; if missing then \"Choose what you like\" is used as the default value independently of the chosen menu language)",
+                                        "type": "string"
+                                    },
+                                    "fallbackComboGroupOptionName": {
+                                        "description": "A fallback text for choices if such an API option has no title, e.g. in sets (optional; if missing then \"Choose what you like\" is used as the default value independently of the chosen menu language)",
                                         "type": "string"
                                     }
                                 }
