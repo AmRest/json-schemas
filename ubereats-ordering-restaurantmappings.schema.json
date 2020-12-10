@@ -103,7 +103,7 @@
             "description": "Translation templates per language (optional; if missing then the specific restaurant mapping's translations apply; otherwise these translations are merged with eventually existing translations from specific mappings)",
             "type": "object",
             "patternProperties": {
-                "default.*": {
+                ".*": {
                     "description": "Selects a language. \"default\" is used as a fallback language, if for a restaurant's menu language there is not found any translation template",
                     "type": "object",
                     "examples": [
@@ -257,7 +257,7 @@
                         "description": "Restaurant-specific translation templates per language (optional; if missing then any inherited translations apply; otherwise these translations are merged with eventually existing default translations)",
                         "type": "object",
                         "patternProperties": {
-                            "default.*": {
+                            ".*": {
                                 "description": "Selects a language. \"default\" is used as a fallback language, if for a restaurant's menu language there is not found any translation template",
                                 "type": "object",
                                 "examples": [
