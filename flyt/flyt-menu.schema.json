@@ -1,0 +1,352 @@
+{
+	$schema: 'http://json-schema.org/draft-07/schema#',
+	definitions: {
+		Availability: {
+			properties: {
+				friday: {
+					items: {
+						type: 'string',
+					},
+					type: 'array',
+					minItems: 1,
+				},
+				monday: {
+					description: 'Availability time strings must be in the format "09:00 - 17:30"',
+					items: {
+						type: 'string',
+					},
+					type: 'array',
+					minItems: 1,
+				},
+				saturday: {
+					items: {
+						type: 'string',
+					},
+					type: 'array',
+					minItems: 1,
+				},
+				sunday: {
+					items: {
+						type: 'string',
+					},
+					type: 'array',
+					minItems: 1,
+				},
+				thursday: {
+					items: {
+						type: 'string',
+					},
+					type: 'array',
+					minItems: 1,
+				},
+				tuesday: {
+					items: {
+						type: 'string',
+					},
+					type: 'array',
+					minItems: 1,
+				},
+				wednesday: {
+					items: {
+						type: 'string',
+					},
+					type: 'array',
+					minItems: 1,
+				},
+			},
+			type: 'object',
+			required: [
+				'monday',
+				'tuesday',
+				'wednesday',
+				'thursday',
+				'friday',
+				'saturday',
+				'sunday',
+			],
+		},
+		BaselineMenu: {
+			properties: {
+				availability: {
+					$ref: '#/definitions/Availability',
+				},
+				categories: {
+					items: {
+						$ref: '#/definitions/MenuCategory',
+					},
+					type: 'array',
+				},
+				name: {
+					type: 'string',
+					minLength: 1,
+				},
+				reference: {
+					description: 'The identifier the POS uses for this menu',
+					type: 'string',
+				},
+				type: {
+					$ref: '#/definitions/MenuType',
+				},
+			},
+			type: 'object',
+			required: ['availability', 'categories', 'name', 'reference', 'type'],
+		},
+		MenuCategory: {
+			properties: {
+				description: {
+					type: 'string',
+				},
+				items: {
+					items: {
+						$ref: '#/definitions/MenuItem',
+					},
+					type: 'array',
+				},
+				name: {
+					type: 'string',
+					minLength: 1,
+				},
+			},
+			type: 'object',
+			required: ['name', 'description', 'items'],
+		},
+		MenuImage: {
+			properties: {
+				url: {
+					type: 'string',
+				},
+			},
+			type: 'object',
+			required: ['url'],
+		},
+		MenuIncludes: {
+			properties: {
+				description: {
+					type: 'string',
+				},
+				modifiers: {
+					items: {
+						$ref: '#/definitions/MenuModifier',
+					},
+					type: 'array',
+				},
+				name: {
+					type: 'string',
+					minLength: 1,
+				},
+				plu: {
+					type: 'string',
+				},
+			},
+			type: 'object',
+			required: ['description', 'modifiers', 'name', 'plu'],
+		},
+		MenuIngredient: {
+			properties: {
+				name: {
+					type: 'string',
+					minLength: 1,
+				},
+			},
+			type: 'object',
+			required: ['name'],
+		},
+		MenuItem: {
+			properties: {
+				description: {
+					type: 'string',
+				},
+				gallery: {
+					items: {
+						$ref: '#/definitions/MenuImage',
+					},
+					type: 'array',
+				},
+				includes: {
+					items: {
+						$ref: '#/definitions/MenuIncludes',
+					},
+					type: 'array',
+				},
+				ingredients: {
+					items: {
+						$ref: '#/definitions/MenuIngredient',
+					},
+					type: 'array',
+				},
+				modifiers: {
+					items: {
+						$ref: '#/definitions/MenuModifier',
+					},
+					type: 'array',
+				},
+				name: {
+					type: 'string',
+					minLength: 1,
+				},
+				plu: {
+					description:
+						'Price Look Up Unit (similar to SKU, stock keeping unit)\na unique product/item reference typically specific to each merchant,\nie: not globally unique',
+					type: 'string',
+				},
+				price: {
+					description: "An item's price in pennies",
+					type: 'number',
+					minimum: 0,
+				},
+				reference: {
+					type: 'string',
+				},
+				swap: {
+					$ref: '#/definitions/Swap',
+				},
+				taxCategory: {
+					$ref: '#/definitions/TaxCategory',
+				},
+				tax_category: {
+					$ref: '#/definitions/TaxCategory',
+				},
+			},
+			type: 'object',
+			required: [
+				'name',
+				'description',
+				'plu',
+				'modifiers',
+				'includes',
+				'price',
+				'ingredients',
+			],
+		},
+		MenuModifier: {
+			properties: {
+				description: {
+					type: 'string',
+				},
+				name: {
+					type: 'string',
+					minLength: 1,
+				},
+				options: {
+					items: {
+						$ref: '#/definitions/MenuItem',
+					},
+					type: 'array',
+				},
+				pick: {
+					anyOf: [
+						{
+							$ref: '#/definitions/PickExactly',
+						},
+						{
+							$ref: '#/definitions/PickRange',
+						},
+						{
+							$ref: '#/definitions/PickUnlimited',
+						},
+					],
+				},
+			},
+			type: 'object',
+			required: ['description', 'name', 'options', 'pick'],
+		},
+		MenuType: {
+			enum: ['COLLECTION', 'DELIVERY', 'EAT_IN'],
+			type: 'string',
+		},
+		PickExactly: {
+			properties: {
+				exactly: {
+					type: 'number',
+				},
+				pick_same_option: {
+					type: 'boolean',
+				},
+			},
+			type: 'object',
+			required: ['exactly', 'pick_same_option'],
+		},
+		PickRange: {
+			properties: {
+				pick_same_option: {
+					type: 'boolean',
+				},
+				range: {
+					properties: {
+						from: {
+							type: 'number',
+						},
+						to: {
+							type: 'number',
+						},
+					},
+					type: 'object',
+				},
+			},
+			type: 'object',
+			required: ['pick_same_option', 'range'],
+		},
+		PickUnlimited: {
+			properties: {
+				pick_same_option: {
+					type: 'boolean',
+				},
+			},
+			type: 'object',
+			required: ['pick_same_option'],
+		},
+		Swap: {
+			properties: {
+				name: {
+					type: 'string',
+				},
+				options: {
+					items: {
+						$ref: '#/definitions/SwapOption',
+					},
+					type: 'array',
+				},
+			},
+			type: 'object',
+			required: ['name', 'options'],
+		},
+		SwapOption: {
+			properties: {
+				name: {
+					type: 'string',
+					minLength: 1,
+				},
+				plu: {
+					type: 'string',
+				},
+				price: {
+					type: 'number',
+					minimum: 0,
+				},
+				reference: {
+					type: 'string',
+				},
+				taxCategory: {
+					$ref: '#/definitions/TaxCategory',
+				},
+			},
+			type: 'object',
+			required: ['name', 'plu', 'price', 'reference'],
+		},
+		TaxCategory: {
+			type: 'string',
+			enum: ['ALCOHOL', 'NO_TAX'],
+		},
+	},
+	type: 'object',
+	properties: {
+		baseline_menus: {
+			items: {
+				$ref: '#/definitions/BaselineMenu',
+			},
+			type: 'array',
+			required: ['availability', 'categories', 'name', 'reference', 'type'],
+		},
+	},
+	required: ['baseline_menus'],
+}
