@@ -1,1 +1,7501 @@
-
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "defaultGlovoWebhook": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "token"
+      ]
+    },
+    "defaultGlovoEndpoint": {
+      "type": "object",
+      "properties": {
+        "baseUrl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "baseUrl"
+      ]
+    },
+    "defaultIntegratorEndpoint": {
+      "type": "object",
+      "properties": {
+        "baseUrl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "baseUrl"
+      ]
+    },
+    "defaultApiEndpoint": {
+      "type": "object",
+      "properties": {
+        "baseUrl": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "baseUrl",
+        "token"
+      ]
+    },
+    "defaultFeatures": {
+      "type": "object",
+      "properties": {
+        "sync.condiments": {
+          "type": "boolean"
+        },
+        "sync.menuRestrictions": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "sync.condiments",
+        "sync.menuRestrictions"
+      ]
+    },
+    "defaultTranslations": {
+      "type": "object",
+      "properties": {
+        "pl": {
+          "type": "object",
+          "properties": {
+            "condimentCategoryName": {
+              "type": "string"
+            },
+            "fallbackSpecialtyOptionName": {
+              "type": "string"
+            },
+            "fallbackDoughOptionName": {
+              "type": "string"
+            },
+            "fallbackToppingCategoryOptionName": {
+              "type": "string"
+            },
+            "fallbackComboGroupOptionName": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "condimentCategoryName",
+            "fallbackSpecialtyOptionName",
+            "fallbackDoughOptionName",
+            "fallbackToppingCategoryOptionName",
+            "fallbackComboGroupOptionName"
+          ]
+        }
+      },
+      "required": [
+        "pl"
+      ]
+    },
+    "defaultAddressPatterns": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "mappings": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "glovoStore": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            },
+            "apiRestaurant": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "string"
+                },
+                "lng": {
+                  "type": "string"
+                },
+                "menuLanguage": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "brand",
+                "source",
+                "lat",
+                "lng",
+                "menuLanguage"
+              ]
+            }
+          },
+          "required": [
+            "glovoStore",
+            "apiRestaurant"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "$schema",
+    "defaultGlovoWebhook",
+    "defaultGlovoEndpoint",
+    "defaultIntegratorEndpoint",
+    "defaultApiEndpoint",
+    "defaultFeatures",
+    "defaultTranslations",
+    "defaultAddressPatterns",
+    "mappings"
+  ]
+}
